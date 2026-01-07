@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.25)
+
+set(CMAKE_CXX_STANDARD 20)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+project(AStarExam CXX)
+
+file(GLOB_RECURSE SOURCE_FILES ${PROJECT_SOURCE_DIR}/Sources/*.cpp)
+file(GLOB_RECURSE HEADER_FILES ${PROJECT_SOURCE_DIR}/Sources/*.h)
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
